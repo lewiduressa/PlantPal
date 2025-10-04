@@ -20,14 +20,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        val button : Button = findViewById(R.id.btnHello)
-        val textView: TextView = findViewById(R.id.tvMessage)
-
-        button.setOnClickListener { 
-            textView.text = getString(R.string.hello_world)
-        }
-
-
 
     }
 }
