@@ -12,21 +12,23 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.plantpal.ui.theme.PlantPalTheme
+import android.widget.Button
+import android.widget.TextView
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContent {
-            PlantPalTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
+        setContentView(R.layout.activity_main)
+        val button : Button = findViewById(R.id.btnHello)
+        val textView: TextView = findViewById(R.id.tvMessage)
+
+        button.setOnClickListener { 
+            textView.text = getString(R.string.hello_world)
         }
+
+
+
     }
 }
 
