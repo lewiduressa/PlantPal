@@ -15,11 +15,11 @@ import com.example.plantpal.ui.theme.PlantPalTheme
 import android.widget.Button
 import android.widget.TextView
 
-class MainActivity : ComponentActivity() {
+class LoginActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_login)
 
     }
 }
